@@ -108,7 +108,7 @@ class _HomeFormState extends State<HomeForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Signed Up Users'),
       ),
       body: Form(
         key: _formKey,
