@@ -40,7 +40,7 @@ class _HomeFormState extends State<HomeForm> {
       _conEmail.text = sp.getString("email");
       _conPassword.text = sp.getString("password");
     });
-  }
+   }
 
   update() async {
     String uid = _conUserId.text;
@@ -108,6 +108,9 @@ class _HomeFormState extends State<HomeForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(icon: Icon(Icons.menu), onPressed: (){
+
+        }),
         title: Text('Signed Up Users'),
       ),
       body: Form(
@@ -186,7 +189,7 @@ class _HomeFormState extends State<HomeForm> {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
-                ],
+                ], //children
               ),
             ),
           ),
