@@ -3,6 +3,7 @@ import 'package:rescue_project/Com/comHelper.dart';
 import 'package:rescue_project/Com/getTextFormField.dart';
 import 'package:rescue_project/DatabaseHandler/DbHelper.dart';
 import 'package:rescue_project/Model/UserModel.dart';
+import 'package:rescue_project/NavBar.dart';
 import 'package:rescue_project/Screens/LoginForm.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -107,10 +108,11 @@ class _HomeFormState extends State<HomeForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavBar(),
       appBar: AppBar(
-        leading: IconButton(icon: Icon(Icons.menu), onPressed: (){
-
-        }),
+        // leading: IconButton(icon: Icon(Icons.menu), onPressed: (){
+        //
+        // }),
         title: Text('Signed Up Users'),
       ),
       body: Form(
