@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rescue_project/Screens/Home.dart';
 
 class NavBar extends StatelessWidget {
   // const NavBar({Key? key}) : super(key: key);
@@ -33,23 +34,59 @@ class NavBar extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.contact_phone),
-            title: Text('Calls received'),
-            onTap: () => null,
+            leading: Icon(Icons.home),
+            title: Text('Home'),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+            },
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Waiting List'),
+            leading: Icon(Icons.add_alert),
+            title: Text('Incidents'),
+            onTap: () => null,
+            trailing: ClipOval(
+              child: Container(
+                color: Colors.red,
+                width: 20,
+                height: 20,
+                child: Center(
+                  child: Text('8',style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14
+                  ),),
+                ),
+              ),
+            ),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.feedback),
+            title: Text('Feedback'),
             onTap: () => null,
           ),
+          Divider(),
           ListTile(
-            leading: Icon(Icons.contact_phone),
-            title: Text('Calls received'),
+            leading: Icon(Icons.perm_device_information),
+            title: Text('About Us'),
+            onTap: () => null,
+          ),
+          // Divider(),
+          SizedBox(
+            height: 50,
+          ),
+          ListTile(
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Exit',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.red
+              ),
+            ),
+            iconColor: Colors.red,
             onTap: () => null,
           ),
         ],
       ),
-
     );
   }
 }
